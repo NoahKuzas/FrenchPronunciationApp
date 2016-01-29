@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="umd.frenchpronunciationapp.FragmentList1"
+    android:orientation="vertical">
+
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:id="@+id/graph_container"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/phrase"
+        android:layout_weight="0.52"
+        android:layout_above="@+id/male" />
+
+
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:id="@+id/male"
+        android:layout_weight=".25"
+        android:layout_gravity="right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text = "Male"
+        />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:id="@+id/female"
+        android:layout_weight="0.25"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text = "Female"
+        android:layout_below="@+id/phrase"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Choose Voice"
+        android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/phrase"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:id="@+id/stop"
+        android:layout_above="@+id/seekBar2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/play"
+        android:layout_alignTop="@+id/stop"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Record"
+        android:id="@+id/record"
+        android:layout_alignBottom="@+id/play"
+        android:layout_alignRight="@+id/male"
+        android:layout_alignEnd="@+id/male" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar2"
+        android:layout_above="@+id/phrase"
+        android:layout_toRightOf="@+id/stop"
+        android:layout_toLeftOf="@+id/record"
+        android:layout_toStartOf="@+id/record" />
+</RelativeLayout>
+    <ListView
+    android:id="@android:id/list"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight=".70"
+    android:fillViewport="true"
+    android:drawSelectorOnTop="false">
+    </ListView>
+
+    </LinearLayout>
